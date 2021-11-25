@@ -1,9 +1,84 @@
-@media (min-width: 0em){
+@media (min-width: 0em) {
+
     // All sections will have an id
     #landing {
-        height: 100vh;
+        min-height: 100vh;
+        background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(/assets/paidimg01.jpg) center / cover;
         display: flex;
         justify-content: center;
         align-items: center;
-    } 
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: $padding-md;
+            text-align: center;
+
+            h1 {
+                color: white;
+                margin-bottom: $margin-sm;
+                font-size: $font-size-base * 2;
+                text-transform: uppercase;
+            }
+
+            p {
+                color: $text-color;
+            }
+
+            .ctas {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+    }
+
+    #intro-collection {
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            grid-gap: 1rem;
+            margin: auto;
+            padding: $padding-md;
+
+            .item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+                .head {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-bottom: .2rem;
+                    max-height: 300px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+                a {
+                    color: $text-color;
+                    text-decoration: none;
+                    font-size: $font-size-base * .7;
+                } 
+                p {
+                    font-size: $font-size-base * 1.2;
+                    margin-bottom: $margin-sm;
+                }
+                a.btn {
+                    background-color: black;
+                    margin: 0;
+                }
+            }
+        }
+    }
 }

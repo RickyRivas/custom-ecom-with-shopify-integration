@@ -31,21 +31,21 @@
         <nav>
             <div class='logo-wrapper'>
                 <img src='assets/RLOGO1-01.svg' class='' alt=''>
-                <p>R Web Designs</p>
             </div>
             <div class='navlinks-overlay'></div>
             <ul class="nav-links">
                 <li class="nav-link"><a href="index.html">Home</a></li>
+                <li class="nav-link"><a href="#">Services</a></li>
                 <li class="nav-link"><a href="#">Portfolio</a></li>
-                <li class="nav-link"><a href="#">Pricing</a></li>
-                <li class="nav-link"><a href="#">Gallery</a></li>
                 <li class="nav-link"><a href="#">About</a></li>
+                <li class="nav-link"><a href="contact.html">Contact</a></li>
+                <li class='social-media'>
+                    <img src='assets/instagram.svg' alt="instagram icon" class="">
+                    <img src='assets/facebook.svg' alt="instagram icon" class="">
+                </li>
             </ul>
-
-            <button class="hamburger hamburger--squeeze" type="button" aria-label="Navigation Toggle"
-                aria-controls="navigation">
-                <span class="hamburger-box">
-                    <span class="hamburger-inner"></span>
+            <button class="hamburger" type="button" aria-label="Navigation Toggle" aria-controls="navigation">
+                <span class="hamburger-inner">
                 </span>
             </button>
         </nav>
@@ -55,9 +55,44 @@
     <main>
         <!-- Landing Section Start -->
         <section id='landing'>
-            <div id='collection-component-1637783966060'></div>
+            <div class="container">
+                <h1>Rivas Gold and Silver</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla, nesciunt! Lorem ipsum dolor sit
+                    amet.</p>
+                <div class="ctas">
+                    <a class="btn btn-light">View Coins</a>
+                    <a class="btn btn-light">Contact Us</a>
+                </div>
+            </div>
         </section>
         <!-- Landing Section End -->
+        <!-- Intro Collection (two) start -->
+        <section id='intro-collection'>
+            <div class="container">
+                <div class='item'>
+                    <div class="head">
+                        <img src="/assets/img01.jpeg" alt="">
+                    </div>
+                    <a href="/">Bright. Light. Great.</a>
+                    <p>Beautiful Gold Coins</p>
+                    <a class='btn btn-primary' href="/">Shop Gold Coins</a>
+                </div>
+                <div class='item'>
+                    <div class="head">
+                        <img src="/assets/img01.jpeg" alt="">
+                    </div>
+                    <a href="/">Bright. Light. Great.</a>
+                    <p>Beautiful Silver Coins</p>
+                    <a class='btn btn-primary' href="/">Shop Silver Coins</a>
+                </div>
+            </div>
+        </section>
+        <!-- Intro Collection (two) end -->
+        <!-- First Set of items grid start -->
+        <section id='intro-items'>
+            <div id='collection-component-1637816485183'></div>
+        </section>
+        <!-- First Set of items grid end -->
         <!-- Shopify Embed -->
         <script type="text/javascript">
             /*<![CDATA[*/
@@ -90,79 +125,67 @@
                     ShopifyBuy.UI.onReady(client).then(function (ui) {
                         ui.createComponent('collection', {
                             id: '263681605680',
-                            node: document.getElementById('collection-component-1637783966060'),
+                            node: document.getElementById('collection-component-1637816485183'),
                             moneyFormat: '%24%7B%7Bamount%7D%7D',
                             options: {
-                                // forEach Product
                                 "product": {
                                     "styles": {
                                         "product": {
-                                            "@media (min-width: 601px)": {
-                                                "max-width": "calc(25% - 20px)",
-                                                "margin-left": "20px",
-                                                "margin-bottom": "50px",
-                                                "width": "calc(25% - 20px)"
-                                            },
+                                            "display": "flex",
+                                            "justify-content": "center",
+                                            "align-items": "center",
+                                            "flex-direction": "column",
+                                            "margin": "0 ! important",
+                                            "width": '100%',
                                             "img": {
-                                                "height": "calc(100% - 15px)",
-                                                "position": "absolute",
-                                                "left": "0",
-                                                "right": "0",
-                                                "top": "0"
+                                                "width": '100%',
+                                                "max-width": '150px',
+                                                "object-fit": "cover"
+
                                             },
                                             "imgWrapper": {
-                                                "padding-top": "calc(75% + 15px)",
-                                                "position": "relative",
-                                                "height": "0"
-                                            }
-                                        },
-                                        "button": {
-                                            "background-color": "black",
-                                            ":focus": {
-                                                "background-color": "black",
+                                                "margin": '0',
+                                                "width": '100%',
                                             },
-                                            ":hover": {
+                                            "button": {
                                                 "background-color": "black",
                                             }
-                                        },
+                                        }
                                     },
                                     "text": {
-                                        "button": "View Item"
-                                    },
-                                    "buttonDestination": 'modal'
+                                        "button": "Add to cart"
+                                    }
                                 },
-                                // Collection
                                 "productSet": {
                                     "styles": {
                                         "products": {
-                                            "@media (min-width: 601px)": {
-                                                "margin-left": "-20px"
-                                            }
+                                            "width": '100%',
+                                            "display": "grid",
+                                            "grid-gap": "1rem",
+                                            "place-items": 'center',
+                                            "margin": '0',
+                                            "grid-template-columns": "repeat(auto-fit, minmax(150px, 1fr))"
                                         }
                                     }
                                 },
-                                // Modal
                                 "modalProduct": {
                                     "contents": {
-                                        "img": true,
+                                        "img": false,
                                         "imgWithCarousel": true,
-                                        "button": true,
+                                        "button": false,
                                         "buttonWithQuantity": true
                                     },
                                     "styles": {
                                         "product": {
-                                            "@media (min-width: 0px)": {
+                                            "@media (min-width: 601px)": {
                                                 "max-width": "100%",
-                                                "margin-left": "0px",
-                                                "margin-bottom": "0px"
                                             }
                                         }
                                     },
                                     "text": {
-                                        "button": "Checkout"
+                                        "button": "Add to cart"
                                     }
                                 },
-                                // Option
                                 "option": {},
                                 "cart": {
                                     "text": {
@@ -170,11 +193,10 @@
                                         "button": "Checkout"
                                     }
                                 },
-                                // Cart Toggle
                                 "toggle": {
                                     "styles": {
                                         "toggle": {
-                                            "background-color": 'black'
+                                            "background-color": "black",
                                         }
                                     }
                                 }
