@@ -43,7 +43,7 @@
             grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
             grid-gap: 1rem;
             margin: auto;
-            padding: $padding-md;
+            padding: $padding-lg $padding-md;
 
             .item {
                 display: flex;
@@ -57,28 +57,146 @@
                     justify-content: center;
                     align-items: center;
                     margin-bottom: .2rem;
-                    max-height: 300px;
+                    max-height: 400px;
 
                     img {
                         width: 100%;
                         height: 100%;
                         object-fit: cover;
+                        // display: none;
                     }
                 }
+
                 a {
                     color: $text-color;
                     text-decoration: none;
                     font-size: $font-size-base * .7;
-                } 
+                }
+
                 p {
                     font-size: $font-size-base * 1.2;
                     margin-bottom: $margin-sm;
                 }
+
                 a.btn {
                     background-color: black;
                     margin: 0;
                 }
             }
+        }
+    }
+
+    #intro-items {
+
+        #collection-component-1637816485183 {
+
+            .shopify-buy__collection-products {
+                width: 100%;
+                max-width: 1200px;
+                margin: auto;
+                display: grid;
+                padding: $padding-lg $padding-md;
+                grid-gap: .5rem;
+                place-items: center;
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
+                .shopify-buy__product {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    margin: 0;
+                    width: 100%;
+                    max-width: 300px;
+
+                    .shopify-buy__product-img-wrapper {
+                        margin: 0;
+
+                        img {
+                            max-width: 150px;
+                        }
+
+                    }
+
+                    .shopify-buy__product__price {
+                        margin-bottom: $margin-sm;
+                    }
+
+                    .shopify-buy__btn-wrapper {
+                        button {
+                            background-color: black;
+                            padding: 10px 30px;
+                            color: white;
+                            cursor: pointer;
+                            border: 0;
+                            box-shadow: $box-shadow;
+
+                            &:hover {
+                                opacity: .8;
+                            }
+
+                            border-radius: unset;
+                        }
+                    }
+                }
+            }
+        }
+
+        .shopify-buy-frame--productSet {
+            display: unset;
+        }
+    }
+
+    #founder {
+        min-height: 350px;
+        background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(/assets/paidimg01.jpg) center / cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        h2 {
+            color: white;
+            margin-bottom: $margin-md;
+        }
+
+        p {
+            color: $text-color;
+        }
+    }
+
+    .shopping-cart-li {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: max-content;
+        margin-right: 1rem;
+
+        &:hover {
+            &::after {
+                display: none !important;
+            }
+        }
+
+        .snipcart-items-count {
+            background-color: white;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            font-size: $font-size-sm * .6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            right: -.4rem;
+            top: 0rem;
+        }
+
+        img {
+            width: 2rem;
+            height: 2rem;
+            margin: 0;
         }
     }
 }

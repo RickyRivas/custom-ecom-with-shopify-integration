@@ -29,25 +29,32 @@
     <!-- Navigation Start -->
     <header>
         <nav>
-            <div class='logo-wrapper'>
-                <img src='assets/RLOGO1-01.svg' class='' alt=''>
+            <div class='logo-box'>
+                <img src='assets/RLOGO1-01.svg' class='logo' alt='esb logo'>
             </div>
             <div class='navlinks-overlay'></div>
-            <ul class="nav-links">
-                <li class="nav-link"><a href="index.html">Home</a></li>
-                <li class="nav-link"><a href="#">Services</a></li>
-                <li class="nav-link"><a href="#">Portfolio</a></li>
-                <li class="nav-link"><a href="#">About</a></li>
-                <li class="nav-link"><a href="contact.html">Contact</a></li>
-                <li class='social-media'>
-                    <img src='assets/instagram.svg' alt="instagram icon" class="">
-                    <img src='assets/facebook.svg' alt="instagram icon" class="">
-                </li>
-            </ul>
-            <button class="hamburger" type="button" aria-label="Navigation Toggle" aria-controls="navigation">
-                <span class="hamburger-inner">
-                </span>
-            </button>
+            <div class="wrap">
+                <ul class="nav-links">
+                    <li class="nav-link"><a href="index.html">Home</a></li>
+                    <li class="nav-link"><a href="services.html">Services</a></li>
+                    <li class="nav-link"><a href="gallery.html">Gallery</a></li>
+                    <li class="nav-link"><a href="products.html">Products</a></li>
+                    <li class="nav-link"><a href="about.html">About</a></li>
+                    <li class='social-media'>
+                        <!-- <a href='https://www.instagram.com/esb_barbershop/'><img src='images/instagramwhite.svg'
+                                alt="instagram link" class=""></a>
+                        <a href='https://www.facebook.com/eastsideblends'><img src='images/facebook-logo.svg'
+                                alt="facebook link" class=""></a> -->
+                    </li>
+                </ul>
+                <a href='#' class="shopping-cart-li"><span class="snipcart-items-count"></span>
+                    <img src="/assets/shopping-cart.svg" alt="" class="standard-icon">
+                </a>
+                <button class="hamburger" type="button" aria-label="Navigation Toggle" aria-controls="navigation">
+                    <span class="hamburger-inner">
+                    </span>
+                </button>
+            </div>
         </nav>
     </header>
     <!-- Navigation End -->
@@ -71,7 +78,7 @@
             <div class="container">
                 <div class='item'>
                     <div class="head">
-                        <img src="/assets/img01.jpeg" alt="">
+                        <img src="/assets/collectionimg01.png" alt="">
                     </div>
                     <a href="/">Bright. Light. Great.</a>
                     <p>Beautiful Gold Coins</p>
@@ -79,7 +86,7 @@
                 </div>
                 <div class='item'>
                     <div class="head">
-                        <img src="/assets/img01.jpeg" alt="">
+                        <img src="/assets/collectionimg02.png" alt="">
                     </div>
                     <a href="/">Bright. Light. Great.</a>
                     <p>Beautiful Silver Coins</p>
@@ -88,133 +95,26 @@
             </div>
         </section>
         <!-- Intro Collection (two) end -->
-        <!-- First Set of items grid start -->
+        <!-- First set of items start -->
         <section id='intro-items'>
             <div id='collection-component-1637816485183'></div>
         </section>
-        <!-- First Set of items grid end -->
-        <!-- Shopify Embed -->
-        <script type="text/javascript">
-            /*<![CDATA[*/
-            (function () {
-                var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
-                if (window.ShopifyBuy) {
-                    if (window.ShopifyBuy.UI) {
-                        ShopifyBuyInit();
-                    } else {
-                        loadScript();
-                    }
-                } else {
-                    loadScript();
-                }
+        <!-- First set of items end-->
+        <!-- Meet the Founder Start -->
+        <section id="founder">
+            <h2>Meet the founder</h2>
+            <p>We had a chat with Ricky in his natural habitat.</p>
+        </section>
+        <!-- Meet the Founder End -->
 
-                function loadScript() {
-                    var script = document.createElement('script');
-                    script.async = true;
-                    script.src = scriptURL;
-                    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0])
-                    .appendChild(script);
-                    script.onload = ShopifyBuyInit;
-                }
-
-                function ShopifyBuyInit() {
-                    var client = ShopifyBuy.buildClient({
-                        domain: 'rivas-web-designs.myshopify.com',
-                        storefrontAccessToken: 'eba450e181f5ca6b7aadf60935318801',
-                    });
-                    ShopifyBuy.UI.onReady(client).then(function (ui) {
-                        ui.createComponent('collection', {
-                            id: '263681605680',
-                            node: document.getElementById('collection-component-1637816485183'),
-                            moneyFormat: '%24%7B%7Bamount%7D%7D',
-                            options: {
-                                "product": {
-                                    "styles": {
-                                        "product": {
-                                            "display": "flex",
-                                            "justify-content": "center",
-                                            "align-items": "center",
-                                            "flex-direction": "column",
-                                            "margin": "0 ! important",
-                                            "width": '100%',
-                                            "img": {
-                                                "width": '100%',
-                                                "max-width": '150px',
-                                                "object-fit": "cover"
-
-                                            },
-                                            "imgWrapper": {
-                                                "margin": '0',
-                                                "width": '100%',
-                                            },
-                                            "button": {
-                                                "background-color": "black",
-                                            }
-                                        }
-                                    },
-                                    "text": {
-                                        "button": "Add to cart"
-                                    }
-                                },
-                                "productSet": {
-                                    "styles": {
-                                        "products": {
-                                            "width": '100%',
-                                            "display": "grid",
-                                            "grid-gap": "1rem",
-                                            "place-items": 'center',
-                                            "margin": '0',
-                                            "grid-template-columns": "repeat(auto-fit, minmax(150px, 1fr))"
-                                        }
-                                    }
-                                },
-                                "modalProduct": {
-                                    "contents": {
-                                        "img": false,
-                                        "imgWithCarousel": true,
-                                        "button": false,
-                                        "buttonWithQuantity": true
-                                    },
-                                    "styles": {
-                                        "product": {
-                                            "@media (min-width: 601px)": {
-                                                "max-width": "100%",
-                                            }
-                                        }
-                                    },
-                                    "text": {
-                                        "button": "Add to cart"
-                                    }
-                                },
-                                "option": {},
-                                "cart": {
-                                    "text": {
-                                        "total": "Subtotal",
-                                        "button": "Checkout"
-                                    }
-                                },
-                                "toggle": {
-                                    "styles": {
-                                        "toggle": {
-                                            "background-color": "black",
-                                        }
-                                    }
-                                }
-                            },
-                        });
-                    });
-                }
-            })();
-            /*]]>*/
-        </script>
-    </main>
-    <!-- Main End -->
+    </main> <!-- Main End -->
     <!-- Footer -->
     <footer>
         <div class='container'>
             <div class='col'>
                 <h2>R Web Designs</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt beatae voluptatibus earum alias.
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt beatae voluptatibus earum
+                    alias.
                     Consequatur soluta alias, nemo sit doloremque eaque.</p>
             </div>
             <div class='col contact'>
@@ -281,6 +181,8 @@
     <!-- Footer -->
     <!-- Scripts -->
     <script src='scripts/main.js'></script>
+    <!-- Shopify -->
+    <script src='scripts/shopify/shopifyIntro.js'></script>
 </body>
 
 </html>

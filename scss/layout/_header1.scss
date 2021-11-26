@@ -3,19 +3,20 @@
     overflow-x: hidden;
     position: relative;
   }
-
+  .body-fixed {
+    position: fixed;
+  }
   .hamburger {
-    z-index: 9999;
+    z-index: 19;
   }
 
   header {
     position: absolute;
-    z-index: 9999;
+    z-index: 19;
     width: 100vw;
 
     & .is-active {
       box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-      z-index: 9999;
     }
 
     & nav {
@@ -34,20 +35,22 @@
         font-size: 1.2em;
       }
 
-      .logo-wrapper {
+      .logo-box {
         position: absolute;
-        left: 1rem;
-        top: 1rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        left: .8rem;
+        top: .8rem;
 
         img {
-          width: 5rem;
+          height: 4.5rem;
+        }
+
+        p {
+          color: white;
+          font-size: 1.2em;
+          text-transform: uppercase;
+          display: none;
         }
       }
-
-
       .nav-links {
         margin: 0;
         position: fixed;
@@ -62,7 +65,7 @@
         align-items: flex-end;
         transform: translateX(100%);
         transition: transform 0.3s ease-in;
-        background-color: $primary;
+        background-color: $gray-200;
         list-style: none;
         padding: 2rem;
 
@@ -83,6 +86,7 @@
             color: white;
             text-decoration: none;
           }
+
           &::after {
             content: '';
             width: 100%;
@@ -92,6 +96,7 @@
             position: absolute;
             transform: translateX(-101%);
           }
+
           &:hover {
             &::after {
               transition: transform .5s;
@@ -107,7 +112,8 @@
         &.is-active {
           transform: translate(0%);
         }
-        .social-media{
+
+        .social-media {
           position: absolute;
           left: 1rem;
           top: 45%;
@@ -121,7 +127,12 @@
             width: 1.5rem;
             margin-bottom: $margin-md;
           }
-        } 
+        }
+      }
+      .wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
     }
 
@@ -160,9 +171,32 @@
       height: 10vh;
       padding: 0.5em;
       width: 100%;
+      justify-content: space-between;
+
       .nav-links {
         li {
           font-size: $font-size-base * 1.5;
+        }
+      }
+      .logo-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height: 100%;
+        top: unset;
+        left: unset;
+
+        img {
+          height: 3.5rem;
+          margin-right: $margin-sm;
+        }
+
+        p {
+          color: white;
+          font-size: 1.5rem;
+          text-transform: uppercase;
+          display: block;
         }
       }
     }
@@ -176,23 +210,14 @@
   }
 
   header {
-    z-index: 5;
     position: absolute;
-    z-index: 1000;
     display: flex;
-    justify-content: center;
     align-items: center;
     height: 80px;
     width: 100vw;
 
-    & .is-active {
-      box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-      z-index: 100;
-    }
-
     & nav {
       display: flex;
-      justify-content: flex-end;
       align-items: center;
       background-color: transparent;
       box-shadow: none;
@@ -202,12 +227,6 @@
       max-width: 1200px;
       margin: auto;
       position: relative;
-
-      .logo-wrapper {
-        img {
-          width: 5rem;
-        }
-      }
 
       .nav-links {
         margin: 0;
@@ -236,6 +255,7 @@
           margin-top: 0em;
           border-bottom: none;
         }
+
         .social-media {
           display: none;
         }
@@ -246,11 +266,8 @@
 
 @media (min-width: 1200px) {
   header {
-    z-index: 5;
     position: absolute;
-    z-index: 1000;
     display: flex;
-    justify-content: center;
     align-items: center;
     height: 100px;
     width: 100vw;
@@ -259,17 +276,10 @@
       box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
       z-index: 100;
     }
+
     & nav {
-      .logo-wrapper {
-        left: 2rem;
-        top: 1rem;
-        img {
-          width: 5rem;
-        }
-      }
       .nav-links {
-        & li {
-        }
+        & li {}
       }
     }
   }
